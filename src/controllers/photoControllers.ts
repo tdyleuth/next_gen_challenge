@@ -1,11 +1,11 @@
-const { Photo } = require('../models/Photo');
+const PhotoModel = require('../models/Photo.ts');
 
 import express, { Request, Response } from 'express';
 
 const getAllPhotos = async (req: Request, res: Response) => {
     try {
-        const products = await Photo.find({});
-        res.json(products);
+        const photos = await PhotoModel.find({});
+        res.json(photos);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server Error' });
@@ -14,8 +14,8 @@ const getAllPhotos = async (req: Request, res: Response) => {
 
 const getPhotoById = async (req: Request, res: Response) => {
     try {
-        const product = await Photo.findById(req.params.id);
-        res.json(product);
+        const photo = await PhotoModel.findById(req.params.id);
+        res.json(photo);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server Error' });

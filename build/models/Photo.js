@@ -18,7 +18,6 @@ const photoSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
-});
-const Product = mongoose.model('photo', photoSchema);
-module.exports = Product;
+}, { timestamps: true });
+const PhotoModel = mongoose.model('photo', photoSchema);
+module.exports = PhotoModel;
