@@ -36,12 +36,12 @@ const deletePhoto = async (req: Request, res: Response) => {
             if (!Photo) {
                 return res
                     .status(404)
-                    .json({ success: false, error: 'Video not found' });
+                    .json({ success: false, error: 'Photo not found' });
             }
 
             return res.status(200).json({
                 success: true,
-                message: 'Video deleted successfully',
+                message: 'Photo deleted successfully',
                 data: Photo,
             });
         }
