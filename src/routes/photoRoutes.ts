@@ -3,12 +3,14 @@ const router = express.Router();
 const {
     getAllPhotos,
     getPhotoById,
+    deletePhoto,
+    createPhoto,
+    updatePhoto,
 } = require('../controllers/photoControllers');
 
-//Get all photos from DB
 router.get('/', getAllPhotos);
-
-//Get photo by id from db
 router.get('/:id', getPhotoById);
-
+router.delete('/photo/:id', deletePhoto);
+router.post('/photo', createPhoto);
+router.put('/photo/:id', updatePhoto);
 module.exports = router;

@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const photoData = require('./data/photoData.ts');
-const Photo = require('./models/Photo.ts');
+const Photo = require('./models/PhotoModel.ts');
 const DB = require('./config/db.ts');
 
 DB();
