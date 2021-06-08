@@ -6,10 +6,11 @@ const {
     deletePhoto,
     createPhoto,
     updatePhoto,
+    uploadPhoto,
 } = require('../controllers/photoControllers');
 
 router.get('/', getAllPhotos);
-router.get('/:id', getPhotoById);
+router.get('/photo/:id', getPhotoById);
 router.delete('/photo/:id', deletePhoto);
 router.post('/photo', createPhoto);
 router.put('/photo/:id', updatePhoto);

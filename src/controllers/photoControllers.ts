@@ -103,7 +103,7 @@ const updatePhoto = async (req: Request, res: Response) => {
         if (err) {
             return res.status(404).json({
                 err,
-                message: 'Video not found!',
+                message: 'Photo not found!',
             });
         }
         photo.name = body.name;
